@@ -1,11 +1,11 @@
 # React Starter kit
-React starter kit fully set up for testing
-React
-Redux
-Jest
-Enzyme
-Webpack
-Webpack Dev Server
+React starter kit fully set up for testing with
+- React
+- Redux
+- Jest
+- Enzyme
+- Webpack
+- Webpack Dev Server
 
 ## Instructions
 clone this repository
