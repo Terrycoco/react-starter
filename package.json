@@ -1,0 +1,67 @@
+{
+  "name": "react-starter",
+  "version": "1.0.0",
+  "description": "Startup with react redux jest enzyme webpack webpack Dev Server",
+  "private": true,
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./test/enzyme.setup.js"
+    ],
+    "moduleNameMapper": {
+      "^actions(.*)$": "<rootDir>/src/actions/$1",
+      "^components(.*)$": "<rootDir>/src/components/$1",
+      "^lib(.*)$": "<rootDir>/src/lib/$1",
+      "^routes(.*)$": "<rootDir>/src/routes/$1",
+      "^store(.*)$": "<rootDir>/src/store/$1",
+      "^style(.*)$": "<rootDir>/src/style/$1",
+      "^test(.*)$": "<rootDir>/src/test/$1"
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+      ]
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "test": "jest --colors --verbose --no-watchman ",
+    "snap": "npm test --  -u"
+  },
+  "author": "Terry Marr",
+  "license": "ISC",
+  "dependencies": {
+    "babel-jest": "^24.5.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-redux": "^6.0.1",
+    "redux-starter-kit": "^0.4.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.1",
+    "css-loader": "^2.1.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme-to-json": "^3.3.5",
+    "html-loader": "^0.5.5",
+    "html-webpack-loader": "0.0.5",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-template": "^6.2.0",
+    "jest": "^24.5.0",
+    "node-sass": "^4.11.0",
+    "react-hot-loader": "^4.8.0",
+    "react-test-renderer": "^16.8.5",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1"
+  }
+}
